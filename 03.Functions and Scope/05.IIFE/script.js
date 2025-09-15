@@ -47,3 +47,24 @@ console.log(MyModule.publicMethod());
 MyModule.addItem("apple");
 MyModule.addItem("banana");
 console.log(MyModule.getItems());
+
+// IIFE for configuration
+const AppConfig = (function () {
+  const environment = "development";
+  const apiUrl =
+    environment === "development"
+      ? "http://localhost:3000/api"
+      : "https://api.myapp.com";
+  const config = {
+    api: {
+      baseUrl: apiUrl,
+      timeout: 5000,
+    },
+    features: {
+      enableLogging: environment === "development",
+      enableAnalytics: environment === "production",
+    },
+  };
+  return Object.freeze(config); // Make config immutable
+})();
+console.log(AppConfig.api.baseUrl);
