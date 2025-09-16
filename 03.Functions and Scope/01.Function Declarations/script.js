@@ -2,8 +2,11 @@
 function greet(name) {
   return `Hello, ${name}!`;
 }
-
 console.log(greet("Alice")); // Output: Hello, Alice!
+
+
+
+
 
 // Function with multiple parameters
 function calculateArea(length, width) {
@@ -43,6 +46,7 @@ console.log(hoistedFunction()); // "I'm hoisted!"
 function hoistedFunction() {
   return "I'm hoisted!";
 }
+
 // Function with validation
 function divide(a, b) {
   if (typeof a !== "number" || typeof b !== "number") {

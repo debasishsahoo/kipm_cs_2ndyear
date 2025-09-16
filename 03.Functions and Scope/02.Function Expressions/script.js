@@ -2,14 +2,12 @@ const greet = function(name) {
     return `Hello, ${name}!`;
 }
 console.log(greet("Alice")); // "Hello, Alice!"
-
 // Named function expression (useful for debugging)
 const factorial = function fact(n) {
     if (n <= 1) return 1;
     return n * fact(n - 1); // Can reference itself by name
 };
 console.log(factorial(5)); // 120
-
 // Function expression with complex logic
 const processOrder = function(order) {
      const tax = 0.08;
