@@ -1,0 +1,27 @@
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 0;
+}
+.main-content .text {
+  flex: 1 1 60%;
+}
+.main-content .image {
+  flex: 1 1 35%;
+}
+.main-content .image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .main-content .text,
+  .main-content .image {
+    flex: 1 1 100%;
+  }
+}

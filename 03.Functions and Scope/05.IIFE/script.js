@@ -5,7 +5,6 @@
 (function () {
   console.log("IIFE executed immediately!");
 })();
-
 // IIFE with parameters
 (function (name, version) {
   console.log(`Welcome to ${name} v${version}`);
