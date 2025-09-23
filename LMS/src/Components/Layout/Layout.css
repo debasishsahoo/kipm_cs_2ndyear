@@ -1,0 +1,167 @@
+/* Sidebar Styles */
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--secondary);
+    color: white;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background: #1a2530;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-header h2 {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.sidebar-header i {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.sidebar-menu {
+    padding: 10px 0;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    padding: 0;
+    margin: 5px 0;
+}
+
+.sidebar-menu button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 20px;
+    color: #bdc3c7;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+    text-align: left;
+}
+
+.sidebar-menu button:hover,
+.sidebar-menu button.active {
+    background: #34495e;
+    color: white;
+    border-left: 4px solid var(--primary);
+}
+
+.sidebar-menu i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    transition: margin-left 0.3s;
+}
+
+/* Header */
+.header {
+    height: var(--header-height);
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header h2 {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    margin-right: 15px;
+    text-align: right;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.user-role {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .sidebar-header h2, .sidebar-menu span {
+        display: none;
+    }
+
+    .sidebar-menu i {
+        margin-right: 0;
+    }
+
+    .main-content {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        transform: translateX(-100%);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .user-info {
+        display: none;
+    }
+
+    .header h2 {
+        font-size: 1.2rem;
+    }
+}
