@@ -1,16 +1,21 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Task Management App",
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "mongodb",
+    "backend"
+  ],
+  "license": "ISC",
+  "author": "debasishsahoo",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "start":"node index.js",
     "dev":"nodemon index.js"
   },
-  "keywords": [],
-  "author": "Debasish Sahoo",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",

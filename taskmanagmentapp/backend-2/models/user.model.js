@@ -1,16 +1,15 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
-
 const userSchema = new mongoose.Schema(
-  {  // debasish 
-    name:{
-      type:String,
-      require:[true,"Name is Required"],
+  {
+    name: {
+      type: String,
+      require: [true, "Name is Required"],
       trim: true,
       maxlength: [50, "Name cannot exceed 50 characters"],
       minlength: [3, "Name must be at least 6 characters"],
     },
-    email:{
+    email: {
       type: String,
       required: [true, "Email is required"],
       unique: true,
@@ -21,29 +20,26 @@ const userSchema = new mongoose.Schema(
         "Please enter a valid email",
       ],
     },
-    password:{
+    password: {
       type: String,
       required: [true, "Password is required"],
       minlength: [6, "Password must be at least 6 characters"],
       select: false,
     },
-    avatar:{
+    avatar: {
       type: String,
       default: null,
     },
-    isActive:{
+    isActive: {
       type: Boolean,
       default: true,
     },
-    lastLogin:{
+    lastLogin: {
       type: Date,
       default: null,
     },
-
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
 // Hash password before saving
