@@ -1,1 +1,90 @@
 Null-A.js
+# -----------------------------
+# Node.js / Express (server)
+# -----------------------------
+server/node_modules/
+server/npm-debug.log*
+server/yarn-debug.log*
+server/yarn-error.log*
+server/pnpm-debug.log*
+
+# Server build / dist
+server/dist/
+server/build/
+server/.cache/
+server/.tmp/
+
+# Server env files
+server/.env
+server/.env.local
+server/.env.development.local
+server/.env.test.local
+server/.env.production.local
+
+# Logs
+logs
+*.log
+*.log.*
+log/
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+*.lcov
+
+# -----------------------------
+# React (client)
+# -----------------------------
+client/node_modules/
+client/.pnp
+client/.pnp.js
+
+# React build
+client/build/
+client/dist/
+
+# Client env files
+client/.env
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local
+
+# -----------------------------
+# General (both client & server)
+# -----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+.cache/
+.tmp/
+coverage/
+
+# -----------------------------
+# OS / System
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# IDE / Editor
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.swm
+
+# -----------------------------
+# Optional (if using Docker)
+# -----------------------------
+docker-compose.override.yml
+.docker/
